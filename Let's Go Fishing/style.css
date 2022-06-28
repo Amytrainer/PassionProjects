@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    background-color: #31c4a0;
+    background: radial-gradient(circle, rgba(17,72,91) 49%, rgba(89,154,132) 35%);
+    overflow: hidden;
+  }
+  
+  .conteiner {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    animation: spin 5s infinite linear;
+  }
+  
+  .eye {
+    height: 20px;
+    width: 20px;
+   background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,1) 35%, rgba(255,255,255,1) 35%);
+    border-radius: 50%;
+    position: relative;
+    top: 50px;
+    left: 20px;
+  }
+  
+  .body {
+    height: 100px;
+    width: 200px;
+    background-color: #fd2e58;
+   border-radius: 109px 96px 110px 121px / 86px 89px 97px 92px;
+    z-index: -1;
+  }
+  
+  .tail {
+    width: 0; 
+    height: 0; 
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent; 
+    border-right: 100px solid #faf842; 
+    position: relative;
+    z-index: -1;
+    border-radius: 203px 217px 164px 0px / 0px 82px 143px 113px;
+    bottom: 150px;
+    left: 170px;
+  }
+  
+  .fin {
+    height: 30px;
+    width: 50px;
+    background-color: #faf842;
+    border-radius: 400px 400px 0px 0px / 150px 150px 150px 113px;
+    position: relative;
+    bottom: 330px;
+    left: 70px;
+  }
+  
+  .backfin {
+    height: 30px;
+    width: 60px;
+    background-color: #ffd000;
+    border-radius: 287px 299px 180px 268px / 0px 0px 149px 150px;
+    position: relative;
+    bottom: 230px;
+    left: 70px;
+  }
+  
+.insta{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width:50%;
+}
+.insta img{
+    width:20%;
+    filter: invert(0);
+}
+
+  @keyframes spin {
+      from {transform:rotate(360deg);}
+      to {transform:rotate(0deg);}
+  }
+
+  .bub {
+    width: 130px;
+    height: 130px;
+    border: 1px solid #faf842;
+    box-shadow: inset 5px -5px 10px white;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .01);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    bottom: -100px;
+}
+
+.bub::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 25px;
+    right: 23px;
+    box-shadow: 0px 0px 20px #fd2e58;
+}
+
+.bub.a {
+    left: 10%;
+    animation: bubble2 2s ease-in 1s infinite;
+}
+
+.bub.b {
+    left: 20%;
+    animation: bubble 1.5s ease-in 1.4s infinite;
+}
+
+.bub.c {
+    left: 28%;
+    animation: bubble 5s ease-in 3.8s infinite;
+}
+
+.bub.d {
+    left: 40%;
+    animation: bubble 1.8s ease-in .5s infinite;
+}
+
+.bub.e {
+    left: 75%;
+    animation: bubble2 2.3s ease-in 2.5s infinite;
+}
+
+.bub.f {
+    left: 90%;
+    animation: bubble 2.5s ease-in 3s infinite;
+}
+
+.bub.g {
+    left: 60%;
+    animation: bubble 2.2s ease-in 2s infinite;
+}
+
+.bub.k {
+    left: 50%;
+    animation: bubble 1.6s ease-in 2s infinite;
+}
+
+.bub.i {
+    left: 65%;
+    animation: bubble2 1.8s ease-in 2.1s infinite;
+}
+
+.bub.j {
+    left: 3%;
+    animation: bubble 2s ease-in 1.5s infinite;
+}
+
+.bub.h {
+    left: 35%;
+    animation: bubble2 3s ease-in infinite;
+}
+
+@keyframes bubble {
+    0% {
+        opacity: 0;
+    }
+    10%,
+    93% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(90px, -700px);
+        display: none;
+    }
+}
+
+@keyframes bubble2 {
+    0% {
+        opacity: 0;
+    }
+    10%,
+    93% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-90px, -700px);
+        display: none;
+    }
+}
